@@ -1,7 +1,19 @@
 <?xml version = "1.0"?>
 <project name = "Hello World Project" default = "info">
 	<property name = "sitename" value = "minaamfasihi.github.io" />
+	<property file = "build.properties" />
 	<target name = "info">
 		<echo>Hello World - Welcome to apache ant. Apache ant version is ${ant.version}. You are on: ${sitename}</echo>
+		<echo>Build version: ${buildversion}</echo>
+		<fileset dir = "${src}" casesensitive = "yes">
+			<patternset refid="java.files.without.stubs" />
+		</fileset>
+		<patternset id="java.files.without.stubs">
+			<include name="src/**/*.java" />
+			<exclude name="src/**/*Stub*" />
+		</patternset>
+		<filelist id="config.files" dir="${webapp.src.folder}">
+			
+		</filelist>
 	</target>
 </project>
