@@ -1,0 +1,7 @@
+<?xml version = "1.0"?>
+<project name = "Hello World Project" default = "info">
+	<property name = "sitename" value = "minaamfasihi.github.io" />
+	<target name = "info">
+		<echo>Hello World - Welcome to apache ant. Apache ant version is ${ant.version}. You are on: ${sitename}</echo>
+	</target>
+</project>
